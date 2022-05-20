@@ -1,4 +1,3 @@
-$ cat s3filecreation.tf
 resource "aws_s3_bucket_object" "object" {
 for_each = fileset("myfiles/", "*")
 bucket = aws_s3_bucket.b.id
